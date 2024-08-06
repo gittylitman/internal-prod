@@ -28,6 +28,16 @@ variable dns_zone_pg_name {
   default = "plink.postgres.database.azure.com"
 }
 
+variable pe_usermanagement {
+  type = string
+  default = "pe-usermanagement"
+}
+
+variable pe_connection_name {
+  type = string
+  default = "pe-connection"
+}
+
 variable vnetlink_pg_name {
   type = string
   default = "vnetlink-pg"

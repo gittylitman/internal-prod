@@ -70,3 +70,17 @@ resource "azurerm_private_dns_zone_virtual_network_link" "vlinkusersmanagement" 
   private_dns_zone_name = azurerm_private_dns_zone.dnszoneusersmanagement.name
   virtual_network_id    = azurerm_virtual_network.vnetext.id
 }
+
+# resource "azurerm_private_endpoint" "peext" {
+#   name                = var.pe_usermanagement
+#   location            = var.resource_group_location
+#   resource_group_name = azurerm_resource_group.rgint.name
+#   subnet_id           = azurerm_subnet.snetusersmanagement.id
+
+#   private_service_connection {
+#     name                           = var.pe_connection_name
+#     private_connection_resource_id = azurerm_linux_web_app.wausersmanagement.id
+#     is_manual_connection           = false
+#     subresource_names              = ["sites"]
+#   }
+# }
